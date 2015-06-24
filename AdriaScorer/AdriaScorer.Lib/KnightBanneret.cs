@@ -15,9 +15,35 @@ namespace AdriaScorer.Lib
 
             bool areMinimumParticipationsArmored = record.KnightsListArmoredParticipations >= this.KnightsListArmoredParticipations;
             bool areMinimumWinsArmored = record.KnightsListArmoredWins >= this.KnightsListArmoredWins;
-            bool areKnightParticipationReqsMet = (record.KnightsListArmoredParticipations + record.KightsListParticipations) >= (this.KnightsListArmoredParticipations + this.KnightsListParticipationsRequired);
+            bool areKnightParticipationReqsMet = (record.KnightsListArmoredParticipations + record.KnightsListParticipations) >= (this.KnightsListArmoredParticipations + this.KnightsListParticipationsRequired);
             bool areKnightWinsReqsMet = (record.KnightsListArmoredWins + record.KnightsListWins) >= (this.KnightsListArmoredWins + this.KnightsListWinsRequired);
             return (areSimpleReqsMet && areKnightParticipationReqsMet && areKnightWinsReqsMet && areMinimumParticipationsArmored && areMinimumWinsArmored);
+        }
+
+        protected override string ExplainMissingRequirements(CombatParticipationRecord record)
+        {
+            StringBuilder explanationBuilder = new StringBuilder("Requirements Missing For:" + this.GetRankName()+": ");
+            
+            if (DemonstrationParticipationsRequired > record.DemonstrationParticipations)
+                explanationBuilder.Append(record.DemonstrationParticipations + " of " + DemonstrationParticipationsRequired + "  Demonstration Participations Required.  ");
+            if (WarParticipationsRequired > record.WarParticipations)
+                explanationBuilder.Append(record.WarParticipations + " of " + WarParticipationsRequired + "  War Participations Required.  ");
+
+            if (KnightsListArmoredParticipations > record.KnightsListArmoredParticipations)
+                explanationBuilder.Append(record.KnightsListParticipations + " of " + KnightsListArmoredParticipations + "  Knights List (Armored) Participations Required.  ");
+            if (KnightsListArmoredWins > record.KnightsListArmoredWins)
+                explanationBuilder.Append(record.KnightsListArmoredWins + " of " + KnightsListArmoredWins + "  Knights List (Armored) Wins Required.  ");
+
+
+            if ((record.KnightsListArmoredParticipations + record.KnightsListParticipations) < (this.KnightsListArmoredParticipations + this.KnightsListParticipationsRequired))
+                explanationBuilder.Append((record.KnightsListArmoredParticipations + record.KnightsListParticipations) + " of " + (this.KnightsListArmoredParticipations + this.KnightsListParticipationsRequired) + "  Knights List Participations Required.  ");
+
+            if ((record.KnightsListArmoredWins + record.KnightsListWins) > (this.KnightsListArmoredWins + this.KnightsListWinsRequired))
+                explanationBuilder.Append((record.KnightsListArmoredWins + record.KnightsListWins) + " of " + (this.KnightsListArmoredWins + this.KnightsListWinsRequired) + "  Knights List Wins Required.  ");
+            
+            
+            
+            return explanationBuilder.ToString();
         }
 
         protected override void ConsumeRecord(CombatParticipationRecord record)
@@ -25,8 +51,8 @@ namespace AdriaScorer.Lib
             int totalNumberOfKnightsParticipationsRequired = this.KnightsListArmoredParticipations + this.KnightsListParticipationsRequired;
             for (int i = 0; i < totalNumberOfKnightsParticipationsRequired; i++)
             {
-                if (record.KightsListParticipations > 0)
-                    record.KightsListParticipations--;
+                if (record.KnightsListParticipations > 0)
+                    record.KnightsListParticipations--;
                 else
                     record.KnightsListArmoredParticipations--;
             }

@@ -67,7 +67,7 @@ namespace AdriaScorer.Lib
             {
                 SergeantsListParticipations = valArray[0],
                 SergeantsListWins = valArray[1],
-                KightsListParticipations = valArray[2],
+                KnightsListParticipations = valArray[2],
                 KnightsListWins = valArray[3],
                 KnightsListArmoredParticipations = valArray[4],
                 KnightsListArmoredWins = valArray[5],

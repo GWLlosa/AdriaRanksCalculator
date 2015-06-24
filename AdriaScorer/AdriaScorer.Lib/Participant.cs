@@ -12,19 +12,23 @@ namespace AdriaScorer.Lib
         public string Name { get; set; }
         public List<Rank> QualifiedRanks { get; set; }
         public string Chapter { get; set; }
+        public string MissingRequirementsForNextRank { get; set; }
         public static Participant GetParticipantForId(int id)
         {
             try
             {
                 string combatantName = WebReader.GetCombatantName(id);
                 string chapter = WebReader.GetCombatantChapter(id);
-                var ranks = Rank.CalculateRanks(WebReader.GetRecord(id));
+                var record = WebReader.GetRecord(id);
+                string reqs = "";
+                var ranks = Rank.CalculateRanks(record, out reqs);
                 return new Participant()
                 {
                     Name = combatantName,
                     Id = id,
                     QualifiedRanks = ranks,
-                    Chapter = chapter
+                    Chapter = chapter,
+                    MissingRequirementsForNextRank = reqs
                 };
             }
             catch (Exception)
@@ -37,12 +41,17 @@ namespace AdriaScorer.Lib
             List<string> fighterData = fighters
                 .Where(fight => fight != null)
                 .Select(fight => fight.ToString()).ToList();
-            fighterData.Insert(0, "Name,URL,Chapter");
+            fighterData.Insert(0, "Name,URL,Chapter,Missing Requirements");
             File.WriteAllLines(fileName, fighterData);
         }
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder('"'+this.Name+"\",\""+this.Url+"\",\""+this.Chapter+"\"");
+            StringBuilder result = new StringBuilder(
+                '"'+this.Name+"\",\""
+                +this.Url+"\",\""
+                + this.Chapter + "\",\""
+                +this.MissingRequirementsForNextRank + "\""
+                );
             foreach (var item in QualifiedRanks)
             {
                 result.Append(",");

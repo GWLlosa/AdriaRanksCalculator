@@ -14,7 +14,7 @@ namespace AdriaScorer.Lib
         { get; set; }
         public int DemonstrationParticipations
         { get; set; }
-        public int KightsListParticipations
+        public int KnightsListParticipations
         { get; set; }
         public int KnightsListWins
         { get; set; }
