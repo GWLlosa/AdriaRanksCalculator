@@ -28,7 +28,7 @@ namespace AdriaScorer.Console
                         fighters.Add(retVal);
             }
             System.Console.Clear();
-            Participant.DumpListToCSVFile("output.csv", fighters);
+            Participant.DumpListToCSVFile("../../../../output.csv", fighters);
             foreach (var item in fighters.Select(tas=>tas))
             {
 

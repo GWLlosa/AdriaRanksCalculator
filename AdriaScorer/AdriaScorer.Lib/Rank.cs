@@ -42,7 +42,7 @@ namespace AdriaScorer.Lib
                 qualifiedRanks = previousRank.GetHighestQualifiedRank(record);
             }
 
-            if (DoesRankMeetCriteria(record) && qualifiedRanks.Contains(previousRank))
+            if (DoesRankMeetCriteria(record) && (qualifiedRanks.Contains(previousRank) || previousRank == null))
             {
                 ConsumeRecord(record);
                 qualifiedRanks.Add(this);
@@ -59,6 +59,7 @@ namespace AdriaScorer.Lib
             record.WarParticipations -= this.WarParticipationsRequired;
             record.KnightsListArmoredParticipations -= this.KnightsListArmoredParticipations;
             record.KnightsListArmoredWins -= this.KnightsListArmoredWins;
+            record.DemonstrationParticipations -= this.DemonstrationParticipationsRequired;
         }
 
         protected virtual bool DoesRankMeetCriteria(CombatParticipationRecord record)

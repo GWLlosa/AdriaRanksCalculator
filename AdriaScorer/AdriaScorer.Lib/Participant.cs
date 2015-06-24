@@ -37,12 +37,12 @@ namespace AdriaScorer.Lib
             List<string> fighterData = fighters
                 .Where(fight => fight != null)
                 .Select(fight => fight.ToString()).ToList();
-            fighterData.Insert(0,"Name,Chapter,URL");
+            fighterData.Insert(0, "Name,URL,Chapter");
             File.WriteAllLines(fileName, fighterData);
         }
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder('"'+this.Name+"\",\""+this.Url+"\",\""+this.Chapter);
+            StringBuilder result = new StringBuilder('"'+this.Name+"\",\""+this.Url+"\",\""+this.Chapter+"\"");
             foreach (var item in QualifiedRanks)
             {
                 result.Append(",");
