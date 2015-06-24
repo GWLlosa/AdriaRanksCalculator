@@ -42,7 +42,7 @@ namespace AdriaScorer.Lib
                 qualifiedRanks = previousRank.GetHighestQualifiedRank(record);
             }
 
-            if (DoesRankMeetCriteria(record))
+            if (DoesRankMeetCriteria(record) && qualifiedRanks.Contains(previousRank))
             {
                 ConsumeRecord(record);
                 qualifiedRanks.Add(this);

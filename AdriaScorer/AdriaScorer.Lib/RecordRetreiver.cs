@@ -44,6 +44,13 @@ namespace AdriaScorer.Lib
             string relevantString = stringContents.First(str => str.Contains("<title>"));
             return relevantString.Replace("<title>", "").Replace("</title>", "").Replace("Summary for", "").Trim();
         }
+        public static string GetCombatantChapter(int id)
+        {
+            var webContent = GetWebContentForId(id);
+            var stringContents = webContent.Split(new string[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string relevantString = stringContents.First(str => str.Contains("Chapter:"));
+            return relevantString.Replace("<tr><td><b>Chapter:&nbsp;&nbsp;</b></td><td>", "").Replace("</td></tr>", "").Trim();
+        }
         public static CombatParticipationRecord GetRecord(int id)
         {
             var webContent = GetWebContentForId(id);
