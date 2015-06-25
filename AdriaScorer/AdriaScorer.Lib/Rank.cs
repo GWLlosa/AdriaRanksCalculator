@@ -95,7 +95,7 @@ namespace AdriaScorer.Lib
 
         protected virtual string ExplainMissingRequirements(CombatParticipationRecord record)
         {
-            StringBuilder explanationBuilder = new StringBuilder("Requirements Missing For:" + this.GetRankName()+": ");
+            StringBuilder explanationBuilder = new StringBuilder("Requirements Missing For " + this.GetRankName()+": ");
             if (SergeantsParticipationsRequired > record.SergeantsListParticipations)
                 explanationBuilder.Append(record.SergeantsListParticipations + " of " + SergeantsParticipationsRequired + " Sergeant's List Participations Required.  ");
 

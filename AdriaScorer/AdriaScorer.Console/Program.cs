@@ -15,8 +15,10 @@ namespace AdriaScorer.Console
             System.Console.WriteLine("Test console mode!");
            
             List<Participant> fighters = new List<Participant>();
-            int minValue = 8500;
-            int maxValue = 8600;
+            //recommend range of 1-9400
+            int minValue = 8559;
+
+            int maxValue = 8575;
             for (int i = minValue; i < maxValue; i++)
             {
                 int id = i;

@@ -22,7 +22,7 @@ namespace AdriaScorer.Lib
 
         protected override string ExplainMissingRequirements(CombatParticipationRecord record)
         {
-            StringBuilder explanationBuilder = new StringBuilder("Requirements Missing For:" + this.GetRankName()+": ");
+            StringBuilder explanationBuilder = new StringBuilder("Requirements Missing For " + this.GetRankName()+": ");
             
             if (DemonstrationParticipationsRequired > record.DemonstrationParticipations)
                 explanationBuilder.Append(record.DemonstrationParticipations + " of " + DemonstrationParticipationsRequired + "  Demonstration Participations Required.  ");
@@ -30,7 +30,7 @@ namespace AdriaScorer.Lib
                 explanationBuilder.Append(record.WarParticipations + " of " + WarParticipationsRequired + "  War Participations Required.  ");
 
             if (KnightsListArmoredParticipations > record.KnightsListArmoredParticipations)
-                explanationBuilder.Append(record.KnightsListParticipations + " of " + KnightsListArmoredParticipations + "  Knights List (Armored) Participations Required.  ");
+                explanationBuilder.Append(record.KnightsListArmoredParticipations + " of " + KnightsListArmoredParticipations + "  Knights List (Armored) Participations Required.  ");
             if (KnightsListArmoredWins > record.KnightsListArmoredWins)
                 explanationBuilder.Append(record.KnightsListArmoredWins + " of " + KnightsListArmoredWins + "  Knights List (Armored) Wins Required.  ");
 
