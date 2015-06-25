@@ -16,9 +16,9 @@ namespace AdriaScorer.Console
            
             List<Participant> fighters = new List<Participant>();
             //recommend range of 1-9400
-            int minValue = 8559;
+            int minValue = 1;
 
-            int maxValue = 8575;
+            int maxValue = 9400;
             for (int i = minValue; i < maxValue; i++)
             {
                 int id = i;
