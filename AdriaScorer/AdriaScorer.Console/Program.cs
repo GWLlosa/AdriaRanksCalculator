@@ -19,6 +19,7 @@ namespace AdriaScorer.Console
             int minValue = 1;
 
             int maxValue = 9400;
+            WebReader.LoadData("../../../../cache.bin");
             for (int i = minValue; i < maxValue; i++)
             {
                 int id = i;
@@ -31,6 +32,7 @@ namespace AdriaScorer.Console
             }
             System.Console.Clear();
             Participant.DumpListToCSVFile("../../../../output.csv", fighters);
+            //WebReader.SaveData("../../../../cache.bin");
             foreach (var item in fighters.Select(tas=>tas))
             {
 
@@ -43,9 +45,6 @@ namespace AdriaScorer.Console
                     }
                 }
             }
-            System.Console.WriteLine("Any key to exit plz");
-            System.Console.ReadKey();
-            
         }
 
        

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,7 +77,20 @@ namespace AdriaScorer.Lib
                 DemonstrationParticipations = valArray[7]
             };
             return record;
-
+        }
+        public static void SaveData(string file)
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream outStream = File.OpenWrite(file);
+            bf.Serialize(outStream, contentForId);
+            outStream.Flush();
+            outStream.Close();
+        }
+        public static void LoadData(string file)
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream inStream = File.OpenRead(file);
+            contentForId = (Dictionary<int,string>)bf.Deserialize(inStream);
         }
     }
 }
