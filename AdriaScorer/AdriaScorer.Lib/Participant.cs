@@ -41,7 +41,7 @@ namespace AdriaScorer.Lib
             List<string> fighterData = fighters
                 .Where(fight => fight != null)
                 .Select(fight => fight.ToString()).ToList();
-            fighterData.Insert(0, "Name,URL,Chapter,Highest Qualified Combat Rank,Missing Requirements");
+            fighterData.Insert(0, "Name,URL,Chapter,Highest Potentially Qualified (But Not Necessarily Awarded) Combat Rank,Missing Requirements");
             File.WriteAllLines(fileName, fighterData);
         }
         public override string ToString()

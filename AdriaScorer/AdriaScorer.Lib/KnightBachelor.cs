@@ -8,7 +8,11 @@ namespace AdriaScorer.Lib
 {
     public class KnightBachelor : Rank
     {
+        public KnightBachelor()
+            :base(0,0,10,1,0,0,1,3)
+        {
 
+        }
         public override Rank GetPreviousRank()
         {
             return new Sergeant();
@@ -19,43 +23,5 @@ namespace AdriaScorer.Lib
             return "Knight Bachelor";
         }
 
-        protected override int SergeantsParticipationsRequired
-        {
-            get { return 0; }
-        }
-
-        protected override int SergeantsListWinsRequired
-        {
-            get { return 0; }
-        }
-
-        protected override int DemonstrationParticipationsRequired
-        {
-            get { return 3; }
-        }
-
-        protected override int KnightsListParticipationsRequired
-        {
-            get { return 10; }
-        }
-
-        protected override int KnightsListWinsRequired
-        {
-            get { return 1; }
-        }
-
-        protected override int WarParticipationsRequired
-        {
-            get { return 1; }
-        }
-        protected override int KnightsListArmoredParticipations
-        {
-            get { return 0; }
-        }
-
-        protected override int KnightsListArmoredWins
-        {
-            get { return 0; }
-        }
     }
 }

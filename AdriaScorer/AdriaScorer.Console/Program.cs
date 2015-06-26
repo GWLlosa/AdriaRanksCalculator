@@ -10,6 +10,8 @@ namespace AdriaScorer.Console
 {
     class Program
     {
+        static string folderName = "../../../../Spreadsheets/";
+        static string cachedFileData = "../../../../cache.bin";
         static void Main(string[] args)
         {
             System.Console.WriteLine("Test console mode!");
@@ -19,7 +21,7 @@ namespace AdriaScorer.Console
             int minValue = 1;
 
             int maxValue = 9400;
-            WebReader.LoadData("../../../../cache.bin");
+            WebReader.LoadData(cachedFileData);
             for (int i = minValue; i < maxValue; i++)
             {
                 int id = i;
@@ -27,24 +29,27 @@ namespace AdriaScorer.Console
                         System.Console.WriteLine("Querying: " + id +" of "+maxValue);
                         var retVal = Participant.GetParticipantForId(id);
                         if (retVal != null)
+                        {
                             System.Console.WriteLine("Found: " + retVal.Name);
-                        fighters.Add(retVal);
+                            fighters.Add(retVal);
+                        }
             }
             System.Console.Clear();
-            Participant.DumpListToCSVFile("../../../../output.csv", fighters);
-            //WebReader.SaveData("../../../../cache.bin");
-            foreach (var item in fighters.Select(tas=>tas))
-            {
+            if (!Directory.Exists(folderName))
+                Directory.CreateDirectory(folderName);
+            Participant.DumpListToCSVFile(folderName+"AllCombatants.csv", fighters);
+            var distinctChapters = fighters
+                .Select(fighter => fighter.Chapter)
+                .Distinct();
 
-                if (item != null)
-                {
-                    System.Console.WriteLine("Combatant:" + item.Name);
-                    foreach (var rank in item.QualifiedRanks)
-                    {
-                        System.Console.WriteLine("\t" + rank.GetRankName());
-                    }
-                }
+            foreach (var chapterName in distinctChapters)
+            {
+                System.Console.WriteLine("Writing results for: " + chapterName);
+                Participant.DumpListToCSVFile(folderName + chapterName.Replace(" ", "").Replace("'", "")+".csv",
+                    fighters.Where(fighter => fighter.Chapter == chapterName)
+                    .ToList());
             }
+
         }
 
        

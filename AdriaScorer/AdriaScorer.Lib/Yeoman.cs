@@ -17,45 +17,10 @@ namespace AdriaScorer.Lib
         {
             return "Yeoman";
         }
-
-        protected override int SergeantsParticipationsRequired
+        public Yeoman()
+            :base(0,0,0,0,0,0,0,0)
         {
-            get { return 0; }
-        }
 
-        protected override int SergeantsListWinsRequired
-        {
-            get { return 0; }
-        }
-
-        protected override int DemonstrationParticipationsRequired
-        {
-            get { return 0; }
-        }
-
-        protected override int KnightsListParticipationsRequired
-        {
-            get { return 0; }
-        }
-
-        protected override int KnightsListWinsRequired
-        {
-            get { return 0; }
-        }
-
-        protected override int WarParticipationsRequired
-        {
-            get { return 0; }
-        }
-
-        protected override int KnightsListArmoredParticipations
-        {
-            get { return 0; }
-        }
-
-        protected override int KnightsListArmoredWins
-        {
-            get { return 0; }
         }
     }
 }
