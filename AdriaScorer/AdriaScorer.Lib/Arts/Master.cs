@@ -4,25 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdriaScorer.Lib
+namespace AdriaScorer.Lib.Arts
 {
-    public class KnightBanneret : Rank
+    class Master : ArtsRank
     {
-        public KnightBanneret()
-            :base(0,0,18,5,8,3,5,5)
+        public Master()
+            :base(5,1,0,0,0,0,2)
         {
 
         }
-
         public override Rank GetPreviousRank()
         {
-            return new KnightBachelor();
+            return new Journeyman();
         }
 
         public override string GetRankName()
         {
-            return "Knight Banneret";
+            return "Master";
         }
-
     }
 }

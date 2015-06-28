@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdriaScorer.Lib
+namespace AdriaScorer.Lib.Combat
 {
-    public class CombatParticipationRecord
+    public class CombatParticipationRecord : ParticipationRecord
     {
         public int SergeantsListParticipations
         { get; set; }
@@ -25,17 +25,31 @@ namespace AdriaScorer.Lib
         public int KnightsListArmoredWins { get; set; }
 
         public int KnightsListArmoredParticipations { get; set; }
-
-        internal void Deduct(CombatParticipationRecord combatParticipationRecord)
+        public override ParticipationRecord Photocopy()
         {
-            
+            return new CombatParticipationRecord()
+            {
+                DemonstrationParticipations = this.DemonstrationParticipations,
+                KnightsListArmoredParticipations = this.KnightsListArmoredParticipations,
+                KnightsListArmoredWins = this.KnightsListArmoredWins,
+                KnightsListParticipations = this.KnightsListParticipations,
+                KnightsListWins = this.KnightsListWins,
+                SergeantsListParticipations = this.SergeantsListParticipations,
+                SergeantsListWins = this.SergeantsListWins,
+                WarParticipations = this.WarParticipations
+            };
+        }
+
+        public override void Deduct(ParticipationRecord ParticipationRecord)
+        {
+            CombatParticipationRecord combatParticipationRecord = (CombatParticipationRecord)ParticipationRecord;
             //Demo points are isolated.
             DemonstrationParticipations -= combatParticipationRecord.DemonstrationParticipations;
             //War points are isolated.
             WarParticipations -= combatParticipationRecord.WarParticipations;
-            
+
             //Sergeant's List Participations.
-            for (int i = combatParticipationRecord.SergeantsListParticipations; i >0; i--)
+            for (int i = combatParticipationRecord.SergeantsListParticipations; i > 0; i--)
             {
                 //Need sergeant's list? Start with sergeant's list.
                 if (SergeantsListParticipations > 0)
@@ -57,7 +71,9 @@ namespace AdriaScorer.Lib
                     KnightsListWins--;
                 else if (KnightsListArmoredWins > 0)
                     KnightsListArmoredWins--;
-                
+                else
+                    SergeantsListWins--;
+
             }
 
             //Knight's List Participations.
@@ -72,23 +88,8 @@ namespace AdriaScorer.Lib
             //Knight's List Armored Wins
             KnightsListArmoredWins -= combatParticipationRecord.KnightsListArmoredWins;
 
-            
 
-        }
 
-        internal CombatParticipationRecord Photocopy()
-        {
-            return new CombatParticipationRecord()
-            {
-                DemonstrationParticipations = this.DemonstrationParticipations,
-                KnightsListArmoredParticipations = this.KnightsListArmoredParticipations,
-                KnightsListArmoredWins = this.KnightsListArmoredWins,
-                KnightsListParticipations = this.KnightsListParticipations,
-                KnightsListWins = this.KnightsListWins,
-                SergeantsListParticipations = this.SergeantsListParticipations,
-                SergeantsListWins = this.SergeantsListWins,
-                WarParticipations = this.WarParticipations
-            };
         }
     }
 }

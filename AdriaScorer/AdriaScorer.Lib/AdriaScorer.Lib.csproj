@@ -41,17 +41,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CombatParticipationRecord.cs" />
-    <Compile Include="Guardsman.cs" />
-    <Compile Include="KnightBachelor.cs" />
-    <Compile Include="KnightBanneret.cs" />
-    <Compile Include="KnightChampion.cs" />
+    <Compile Include="Arts\Apprentice.cs" />
+    <Compile Include="Arts\ArtsParticipationRecord.cs" />
+    <Compile Include="Arts\ArtsRank.cs" />
+    <Compile Include="Arts\Journeyman.cs" />
+    <Compile Include="Arts\KnightDoctor.cs" />
+    <Compile Include="Arts\KnightMaster.cs" />
+    <Compile Include="Arts\KnightRobe.cs" />
+    <Compile Include="Arts\Master.cs" />
+    <Compile Include="Combat\CombatParticipationRecord.cs" />
+    <Compile Include="Combat\Guardsman.cs" />
+    <Compile Include="Combat\KnightBachelor.cs" />
+    <Compile Include="Combat\KnightBanneret.cs" />
+    <Compile Include="Combat\KnightChampion.cs" />
     <Compile Include="Participant.cs" />
-    <Compile Include="Rank.cs" />
+    <Compile Include="Combat\CombatRank.cs" />
+    <Compile Include="ParticipationRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rank.cs" />
     <Compile Include="RecordRetreiver.cs" />
-    <Compile Include="Sergeant.cs" />
-    <Compile Include="Yeoman.cs" />
+    <Compile Include="Combat\Sergeant.cs" />
+    <Compile Include="Combat\Yeoman.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

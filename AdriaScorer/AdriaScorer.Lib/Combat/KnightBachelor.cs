@@ -4,23 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdriaScorer.Lib
+namespace AdriaScorer.Lib.Combat
 {
-    public class Sergeant : Rank
+    public class KnightBachelor : CombatRank
     {
-        public Sergeant()
-            :base(5,1,0,0,0,0,0,2)
+        public KnightBachelor()
+            :base(0,0,10,1,0,0,1,3)
         {
 
         }
         public override Rank GetPreviousRank()
         {
-            return new Guardsman();
+            return new Sergeant();
         }
 
         public override string GetRankName()
         {
-            return "Sergeant";
+            return "Knight Bachelor";
         }
 
     }

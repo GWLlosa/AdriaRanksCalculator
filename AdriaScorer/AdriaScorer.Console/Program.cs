@@ -26,15 +26,15 @@ namespace AdriaScorer.Console
             for (int i = minValue; i < maxValue; i++)
             {
                 int id = i;
-             
-                        System.Console.WriteLine("Querying: " + id +" of "+maxValue);
-                        var retVal = Participant.GetParticipantForId(id);
-                        if (retVal != null)
-                        {
-                            System.Console.WriteLine("Found: " + retVal.Name);
-                            if (retVal.ExpiresOn > cutoffDate)
-                                fighters.Add(retVal);
-                        }
+                if (i % 100 == 0)
+                    System.Console.WriteLine("Querying: " + id + " of " + maxValue);
+                var retVal = Participant.GetParticipantForId(id);
+                if (retVal != null && !string.IsNullOrEmpty(retVal.Name))
+                {
+                    System.Console.WriteLine("Found: " + retVal.Name);
+                    if (retVal.ExpiresOn > cutoffDate)
+                        fighters.Add(retVal);
+                }
             }
             System.Console.Clear();
             if (!Directory.Exists(folderName))

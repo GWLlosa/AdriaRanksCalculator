@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdriaScorer.Lib.Combat;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -51,21 +52,21 @@ namespace AdriaScorer.Lib
                 return DateTime.Parse(date);
 
         }
-        public static string GetCombatantName(int id)
+        public static string GetParticipantName(int id)
         {
             var webContent = GetWebContentForId(id);
             var stringContents = webContent.Split(new string[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
             string relevantString = stringContents.First(str => str.Contains("<title>"));
             return relevantString.Replace("<title>", "").Replace("</title>", "").Replace("Summary for", "").Trim();
         }
-        public static string GetCombatantChapter(int id)
+        public static string GetParticipantChapter(int id)
         {
             var webContent = GetWebContentForId(id);
             var stringContents = webContent.Split(new string[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
             string relevantString = stringContents.First(str => str.Contains("Chapter:"));
             return relevantString.Replace("<tr><td><b>Chapter:&nbsp;&nbsp;</b></td><td>", "").Replace("</td></tr>", "").Trim();
         }
-        public static CombatParticipationRecord GetRecord(int id)
+        public static CombatParticipationRecord GetCombatRecord(int id)
         {
             var webContent = GetWebContentForId(id);
             var stringContents = webContent.Split(new string[] {Environment.NewLine, "\n"},StringSplitOptions.RemoveEmptyEntries);
@@ -87,6 +88,30 @@ namespace AdriaScorer.Lib
                 KnightsListArmoredWins = valArray[5],
                 WarParticipations = valArray[6],
                 DemonstrationParticipations = valArray[7]
+            };
+            return record;
+        }
+        public static ArtsParticipationRecord GetArtsRecord(int id)
+        {
+            var webContent = GetWebContentForId(id);
+            var stringContents = webContent.Split(new string[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string relevantString = stringContents.First(str => str.Contains("<tr ALIGN=CENTER BGCOLOR=\"#FFF799\">"));
+            var values = relevantString.Split(new string[] { "<td>", "</td>" }, StringSplitOptions.RemoveEmptyEntries);
+            int sillyInt = 0;
+            var valArray = values
+                            .Where(val => int.TryParse(val, out sillyInt))
+                            .Select(val => int.Parse(val))
+                            .ToArray();
+
+            ArtsParticipationRecord record = new ArtsParticipationRecord()
+            {
+                JourneymanListParticipations = valArray[0],
+                JourneymanListWins = valArray[1],
+                KnightsListParticipations = valArray[2],
+                KnightsListWins = valArray[3],
+                MasterworksMade = valArray[4],
+                WarParticipations = valArray[5],
+                DemoParticipations = valArray[6]
             };
             return record;
         }

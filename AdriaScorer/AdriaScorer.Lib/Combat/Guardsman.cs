@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdriaScorer.Lib
+namespace AdriaScorer.Lib.Combat
 {
-    public class Guardsman : Rank
+    public class Guardsman : CombatRank
     {
         public Guardsman()
             :base(3,0,0,0,0,0,0,0)

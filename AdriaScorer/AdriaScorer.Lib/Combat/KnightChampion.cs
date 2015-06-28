@@ -4,23 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdriaScorer.Lib
+namespace AdriaScorer.Lib.Combat
 {
-    public class Yeoman : Rank
+    public class KnightChampion : CombatRank
     {
+        public KnightChampion()
+            :base(0,0,36,10,16,6,10,15)
+        {
+
+        }
         public override Rank GetPreviousRank()
         {
-            return null;
+            return new KnightBanneret();
         }
 
         public override string GetRankName()
         {
-            return "Yeoman";
+            return "Knight Champion";
         }
-        public Yeoman()
-            :base(0,0,0,0,0,0,0,0)
-        {
 
-        }
     }
 }
