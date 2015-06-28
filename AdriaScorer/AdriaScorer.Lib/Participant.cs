@@ -13,12 +13,14 @@ namespace AdriaScorer.Lib
         public List<Rank> QualifiedRanks { get; set; }
         public string Chapter { get; set; }
         public string MissingRequirementsForNextRank { get; set; }
+        public DateTime ExpiresOn { get; set; }
         public static Participant GetParticipantForId(int id)
         {
             try
             {
                 string combatantName = WebReader.GetCombatantName(id);
                 string chapter = WebReader.GetCombatantChapter(id);
+                DateTime expirationDate = WebReader.GetExpirationDate(id);
                 var record = WebReader.GetRecord(id);
                 string reqs = "";
                 var ranks = Rank.CalculateRanks(record, out reqs);
@@ -27,6 +29,7 @@ namespace AdriaScorer.Lib
                     Name = combatantName,
                     Id = id,
                     QualifiedRanks = ranks,
+                    ExpiresOn = expirationDate,
                     Chapter = chapter,
                     MissingRequirementsForNextRank = reqs
                 };

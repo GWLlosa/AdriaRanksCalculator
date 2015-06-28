@@ -22,6 +22,7 @@ namespace AdriaScorer.Console
 
             int maxValue = 9400;
             WebReader.LoadData(cachedFileData);
+            DateTime cutoffDate = DateTime.Now.Subtract(new TimeSpan(365, 0, 0, 0));
             for (int i = minValue; i < maxValue; i++)
             {
                 int id = i;
@@ -31,7 +32,8 @@ namespace AdriaScorer.Console
                         if (retVal != null)
                         {
                             System.Console.WriteLine("Found: " + retVal.Name);
-                            fighters.Add(retVal);
+                            if (retVal.ExpiresOn > cutoffDate)
+                                fighters.Add(retVal);
                         }
             }
             System.Console.Clear();

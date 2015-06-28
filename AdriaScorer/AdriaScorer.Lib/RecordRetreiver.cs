@@ -39,6 +39,18 @@ namespace AdriaScorer.Lib
                 return webContent;
             }
         }
+        public static DateTime GetExpirationDate(int id)
+        {
+            var webContent = GetWebContentForId(id);
+            var stringContents = webContent.Split(new string[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string relevantString = stringContents.First(str => str.Contains("Expires:"));
+            string date = relevantString.Replace("<tr><td><b>Expires:&nbsp;&nbsp;</b></td><td>", "").Replace("</td></tr>", "");
+            if (date == "never")
+                return DateTime.MaxValue;
+            else
+                return DateTime.Parse(date);
+
+        }
         public static string GetCombatantName(int id)
         {
             var webContent = GetWebContentForId(id);
