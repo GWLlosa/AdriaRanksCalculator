@@ -50,7 +50,7 @@ namespace AdriaScorer.Lib
         public override string ToString()
         {
             StringBuilder result = new StringBuilder(
-                '"'+this.Name.Replace("\"","\\\"")+"\",\""
+                '"'+this.Name.Replace("\"","'")+"\",\""
                 +this.Url+"\",\""
                 + this.Chapter + "\",\""
                 + this.QualifiedRanks.Last().GetRankName() + "\",\""
