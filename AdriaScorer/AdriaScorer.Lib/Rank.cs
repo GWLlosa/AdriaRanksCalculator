@@ -36,6 +36,7 @@ namespace AdriaScorer.Lib
 
             return qualifiedRanks;
         }
+
         protected abstract bool DoesRankMeetCriteria(ParticipationRecord record);
         protected abstract void ConsumeRecord(ParticipationRecord record);
         protected abstract string ExplainMissingRequirements(ParticipationRecord record);

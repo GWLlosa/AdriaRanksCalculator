@@ -1,4 +1,5 @@
-﻿using AdriaScorer.Lib.Combat;
+﻿using AdriaScorer.Lib.Archery;
+using AdriaScorer.Lib.Combat;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -91,6 +92,31 @@ namespace AdriaScorer.Lib
             };
             return record;
         }
+
+        public static ArcheryParticipationRecord GetArcheryRecord(int id)
+        {
+            var webContent = GetWebContentForId(id);
+            var stringContents = webContent.Split(new string[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string relevantString = stringContents.First(str => str.Contains("<tr ALIGN=CENTER BGCOLOR=\"#82CA9C\">"));
+            var values = relevantString.Split(new string[] { "<td>", "</td>" }, StringSplitOptions.RemoveEmptyEntries);
+            int sillyInt = 0;
+            var valArray = values
+                            .Where(val => int.TryParse(val, out sillyInt))
+                            .Select(val => int.Parse(val))
+                            .ToArray();
+
+            ArcheryParticipationRecord record = new ArcheryParticipationRecord()
+            {
+                BowmanParticipations = valArray[0],
+                BowmanWins = valArray[1],
+                HuntsmanParticipations = valArray[2],
+                HuntsmanWins = valArray[3],
+                War = valArray[4],
+                Demo = valArray[5]
+            };
+            return record;
+        }
+
         public static ArtsParticipationRecord GetArtsRecord(int id)
         {
             var webContent = GetWebContentForId(id);
@@ -129,5 +155,7 @@ namespace AdriaScorer.Lib
             FileStream inStream = File.OpenRead(file);
             contentForId = (Dictionary<int,string>)bf.Deserialize(inStream);
         }
+
+      
     }
 }

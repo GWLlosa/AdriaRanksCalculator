@@ -41,6 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archery\ArcheryParticipationRecord.cs" />
+    <Compile Include="Archery\ArcheryRank.cs" />
+    <Compile Include="Archery\Bowman.cs" />
+    <Compile Include="Archery\KnightArcher.cs" />
+    <Compile Include="Archery\KnightForester.cs" />
+    <Compile Include="Archery\KnightWarden.cs" />
+    <Compile Include="Archery\Marksman.cs" />
+    <Compile Include="Archery\YeomanArcher.cs" />
     <Compile Include="Arts\Apprentice.cs" />
     <Compile Include="Arts\ArtsParticipationRecord.cs" />
     <Compile Include="Arts\ArtsRank.cs" />

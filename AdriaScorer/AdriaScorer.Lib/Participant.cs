@@ -1,4 +1,5 @@
-﻿using AdriaScorer.Lib.Arts;
+﻿using AdriaScorer.Lib.Archery;
+using AdriaScorer.Lib.Arts;
 using AdriaScorer.Lib.Combat;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,9 @@ namespace AdriaScorer.Lib
 
         public List<ArtsRank> QualifiedArtisanRanks { get; set; }
         public string MissingRequirementsForNextArtisanRank { get; set; }
+
+        public List<ArcheryRank> QualifiedArcheryRanks { get; set; }
+        public string MissingRequirementsForNextArcheryRank { get; set; }
         
         public static Participant GetParticipantForId(int id)
         {
@@ -60,7 +64,21 @@ namespace AdriaScorer.Lib
                     artisanRanks.Add(new Apprentice());
                     artsReqs = "No Artisan Data";
                 }
-                
+
+                List<ArcheryRank> archeryRanks;
+                string archeryReqs = "";
+                try
+                {
+                    var archeryRecord = WebReader.GetArcheryRecord(id);
+                    archeryRanks = ArcheryRank.CalculateArcheryRanks(archeryRecord, out archeryReqs);
+                }
+                catch (Exception)
+                {
+                    //Assume everyone's at least a Yeoman Archer
+                    archeryRanks = new List<ArcheryRank>();
+                    archeryRanks.Add(new YeomanArcher());
+                    archeryReqs = "No Archery Data";
+                }
 
 
                 return new Participant()
@@ -69,10 +87,12 @@ namespace AdriaScorer.Lib
                     Id = id,
                     QualifiedCombatRanks = combatRanks,
                     QualifiedArtisanRanks = artisanRanks,
+                    QualifiedArcheryRanks = archeryRanks,
                     ExpiresOn = expirationDate,
                     Chapter = chapter,
                     MissingRequirementsForNextCombatRank = combatReqs,
-                    MissingRequirementsForNextArtisanRank = artsReqs
+                    MissingRequirementsForNextArtisanRank = artsReqs,
+                    MissingRequirementsForNextArcheryRank = archeryReqs
                 };
             }
             catch (Exception)
@@ -85,7 +105,7 @@ namespace AdriaScorer.Lib
             List<string> fighterData = fighters
                 .Where(fight => fight != null)
                 .Select(fight => fight.ToString()).ToList();
-            fighterData.Insert(0, "Name,URL,Chapter,Highest Possible Combat Rank,Missing Combat Requirements,Highest Possible Artisan Rank,Missing Artisan Requirements");
+            fighterData.Insert(0, "Name,URL,Chapter,Highest Possible Combat Rank,Missing Combat Requirements,Highest Possible Artisan Rank,Missing Artisan Requirements, Highest Possible Archery Rank, Missing Archery Requirements");
             File.WriteAllLines(fileName, fighterData);
         }
         public override string ToString()
@@ -97,7 +117,9 @@ namespace AdriaScorer.Lib
                 + this.QualifiedCombatRanks.Last().GetRankName() + "\",\""
                 + this.MissingRequirementsForNextCombatRank + "\",\""
                 + this.QualifiedArtisanRanks.Last().GetRankName() + "\",\""
-                +this.MissingRequirementsForNextArtisanRank + "\""
+                + this.MissingRequirementsForNextArtisanRank + "\",\""
+                + this.QualifiedArcheryRanks.Last().GetRankName() + "\",\""
+                + this.MissingRequirementsForNextArcheryRank + "\""
                 );
             
             return result.ToString();
