@@ -62,6 +62,14 @@
     <Compile Include="Combat\KnightBachelor.cs" />
     <Compile Include="Combat\KnightBanneret.cs" />
     <Compile Include="Combat\KnightChampion.cs" />
+    <Compile Include="Ministry\Chamberlain.cs" />
+    <Compile Include="Ministry\Clarke.cs" />
+    <Compile Include="Ministry\KnightCivil.cs" />
+    <Compile Include="Ministry\KnightMinister.cs" />
+    <Compile Include="Ministry\KnightPremier.cs" />
+    <Compile Include="Ministry\MinistryParticipationRecord.cs" />
+    <Compile Include="Ministry\MinistryRank.cs" />
+    <Compile Include="Ministry\Rector.cs" />
     <Compile Include="Participant.cs" />
     <Compile Include="Combat\CombatRank.cs" />
     <Compile Include="ParticipationRecord.cs" />

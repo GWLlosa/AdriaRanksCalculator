@@ -1,5 +1,6 @@
 ﻿using AdriaScorer.Lib.Archery;
 using AdriaScorer.Lib.Combat;
+using AdriaScorer.Lib.Ministry;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -116,7 +117,27 @@ namespace AdriaScorer.Lib
             };
             return record;
         }
+        public static MinistryParticipationRecord GetMinistryRecord(int id)
+        {
+            var webContent = GetWebContentForId(id);
+            var stringContents = webContent.Split(new string[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string relevantString = stringContents.First(str => str.Contains("<tr ALIGN=CENTER BGCOLOR=\"#6DCFF6\">"));
+            var values = relevantString.Split(new string[] { "<td>", "</td>" }, StringSplitOptions.RemoveEmptyEntries);
+            int sillyInt = 0;
+            var valArray = values
+                            .Where(val => int.TryParse(val, out sillyInt))
+                            .Select(val => int.Parse(val))
+                            .ToArray();
 
+            MinistryParticipationRecord record = new MinistryParticipationRecord()
+            {
+                Participation = valArray[0],
+                War = valArray[1],
+                Demo = valArray[2],
+                DemoInitiation = valArray[3]
+            };
+            return record;
+        }
         public static ArtsParticipationRecord GetArtsRecord(int id)
         {
             var webContent = GetWebContentForId(id);
@@ -156,6 +177,8 @@ namespace AdriaScorer.Lib
             contentForId = (Dictionary<int,string>)bf.Deserialize(inStream);
         }
 
-      
+
+
+       
     }
 }
