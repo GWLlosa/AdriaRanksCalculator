@@ -14,7 +14,7 @@ namespace AdriaScorer.Console
         static string cachedFileData = "../../../../cache.bin";
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Test console mode!");
+            System.Console.WriteLine("Beginning Processing of Participant Data");
            
             List<Participant> fighters = new List<Participant>();
             //recommend range of 1-9400

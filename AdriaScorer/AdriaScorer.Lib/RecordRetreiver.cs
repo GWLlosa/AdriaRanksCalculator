@@ -162,6 +162,16 @@ namespace AdriaScorer.Lib
             };
             return record;
         }
+        public static void SaveData(string file, int startingId, int endingId)
+        {
+            for (int i = startingId; i < endingId; i++)
+            {
+                if (i % 250 == 0)
+                    System.Console.WriteLine("Processing ID:" + i);
+                GetWebContentForId(i);
+            }
+            SaveData(file);
+        }
         public static void SaveData(string file)
         {
             BinaryFormatter bf = new BinaryFormatter();
