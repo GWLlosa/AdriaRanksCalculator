@@ -52,8 +52,18 @@ namespace AdriaScorer.Lib
                 return DateTime.MaxValue;
             else
                 return DateTime.Parse(date);
-
         }
+
+        public static DateTime GetLastUpdatedDate(int id)
+        {
+            var webContent = GetWebContentForId(id);
+            var stringContents = webContent.Split(new string[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string relevantString = stringContents.First(str => str.Contains("<td><b>Date:&nbsp;&nbsp;</b>"));
+            string date = relevantString.Replace("<tr><td><b>Date:&nbsp;&nbsp;</b></td><td>", "")
+                                        .Replace("</td></tr>", "");
+            return DateTime.Parse(date);
+        }
+
         public static string GetParticipantName(int id)
         {
             var webContent = GetWebContentForId(id);

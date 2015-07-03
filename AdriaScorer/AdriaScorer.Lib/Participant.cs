@@ -13,9 +13,21 @@ namespace AdriaScorer.Lib
 {
     public class Participant
     {
+        #region Public Properties
         public string Name { get; set; }
         public string Chapter { get; set; }
         public DateTime ExpiresOn { get; set; }
+        public int Id { get; set; }
+
+        public string Url
+        {
+            get
+            {
+                return "http://adrianempire.org/members/rolls.php?id=" + this.Id;
+            }
+        }
+
+        public DateTime UpdatedDate { get; set; }
 
         public List<CombatRank> QualifiedCombatRanks { get; set; }
         public string MissingRequirementsForNextCombatRank { get; set; }
@@ -28,7 +40,7 @@ namespace AdriaScorer.Lib
 
         public List<MinistryRank> QualifiedMinistryRanks { get; set; }
         public string MissingRequirementsForNextMinistryRank { get; set; }
-        
+        #endregion
         public static Participant GetParticipantForId(int id)
         {
             try
@@ -36,68 +48,24 @@ namespace AdriaScorer.Lib
                 string combatantName = WebReader.GetParticipantName(id);
                 string chapter = WebReader.GetParticipantChapter(id);
                 DateTime expirationDate = WebReader.GetExpirationDate(id);
+                DateTime lastUpdateDate = WebReader.GetLastUpdatedDate(id);
 
                 List<CombatRank> combatRanks;
-                string combatReqs = "";
-
-                try
-                {
-                    var combatrecord = WebReader.GetCombatRecord(id);
-                    combatRanks = CombatRank.CalculateCombatRanks(combatrecord, out combatReqs);
-                }
-                catch (Exception)
-                {
-                    //Assume everyone's at least a Yeoman.
-                    combatRanks = new List<CombatRank>();
-                    combatRanks.Add(new Yeoman());
-                    combatReqs = "No Combat Data";
-                }
+                string combatReqs;
+                ExtractCombatRanks(id, out combatRanks, out combatReqs);
 
 
                 List<ArtsRank> artisanRanks;
-                string artsReqs = "";
-                try
-                {
-                    var artsRecord = WebReader.GetArtsRecord(id);
-                    artisanRanks = ArtsRank.CalculateArtsRanks(artsRecord, out artsReqs);
-                }
-                catch (Exception)
-                {
-                    //Assume everyone's at least an Apprentice.
-                    artisanRanks = new List<ArtsRank>();
-                    artisanRanks.Add(new Apprentice());
-                    artsReqs = "No Artisan Data";
-                }
+                string artsReqs;
+                ExtractArtisanRanks(id, out artisanRanks, out artsReqs);
 
                 List<ArcheryRank> archeryRanks;
-                string archeryReqs = "";
-                try
-                {
-                    var archeryRecord = WebReader.GetArcheryRecord(id);
-                    archeryRanks = ArcheryRank.CalculateArcheryRanks(archeryRecord, out archeryReqs);
-                }
-                catch (Exception)
-                {
-                    //Assume everyone's at least a Yeoman Archer
-                    archeryRanks = new List<ArcheryRank>();
-                    archeryRanks.Add(new YeomanArcher());
-                    archeryReqs = "No Archery Data";
-                }
+                string archeryReqs;
+                ExtractArcheryRanks(id, out archeryRanks, out archeryReqs);
 
                 List<MinistryRank> ministryRanks;
-                string ministryReqs = "";
-                try
-                {
-                    var ministryRecord = WebReader.GetMinistryRecord(id);
-                    ministryRanks = MinistryRank.CalculateMinistryRanks(ministryRecord, out ministryReqs);
-                }
-                catch (Exception)
-                {
-                    //Assume everyone's at least a Clarke.
-                    ministryRanks = new List<MinistryRank>();
-                    ministryRanks.Add(new Clarke());
-                    ministryReqs = "No Ministry Data";
-                }
+                string ministryReqs;
+                ExtractMinistryRanks(id, out ministryRanks, out ministryReqs);
 
                 return new Participant()
                 {
@@ -108,6 +76,7 @@ namespace AdriaScorer.Lib
                     QualifiedArcheryRanks = archeryRanks,
                     QualifiedMinistryRanks = ministryRanks,
                     ExpiresOn = expirationDate,
+                    UpdatedDate = lastUpdateDate,
                     Chapter = chapter,
                     MissingRequirementsForNextCombatRank = combatReqs,
                     MissingRequirementsForNextArtisanRank = artsReqs,
@@ -118,6 +87,81 @@ namespace AdriaScorer.Lib
             catch (Exception)
             { return null; }
         }
+        #region Rank Extraction
+        private static void ExtractMinistryRanks(int id, out List<MinistryRank> ministryRanks, out string ministryReqs)
+        {
+
+            ministryReqs = "";
+            try
+            {
+                var ministryRecord = WebReader.GetMinistryRecord(id);
+                ministryRanks = MinistryRank.CalculateMinistryRanks(ministryRecord, out ministryReqs);
+            }
+            catch (Exception)
+            {
+                //Assume everyone's at least a Clarke.
+                ministryRanks = new List<MinistryRank>();
+                ministryRanks.Add(new Clarke());
+                ministryReqs = "No Ministry Data";
+            }
+        }
+
+        private static void ExtractArcheryRanks(int id, out List<ArcheryRank> archeryRanks, out string archeryReqs)
+        {
+
+            archeryReqs = "";
+            try
+            {
+                var archeryRecord = WebReader.GetArcheryRecord(id);
+                archeryRanks = ArcheryRank.CalculateArcheryRanks(archeryRecord, out archeryReqs);
+            }
+            catch (Exception)
+            {
+                //Assume everyone's at least a Yeoman Archer
+                archeryRanks = new List<ArcheryRank>();
+                archeryRanks.Add(new YeomanArcher());
+                archeryReqs = "No Archery Data";
+            }
+        }
+
+        private static void ExtractArtisanRanks(int id, out List<ArtsRank> artisanRanks, out string artsReqs)
+        {
+
+            artsReqs = "";
+            try
+            {
+                var artsRecord = WebReader.GetArtsRecord(id);
+                artisanRanks = ArtsRank.CalculateArtsRanks(artsRecord, out artsReqs);
+            }
+            catch (Exception)
+            {
+                //Assume everyone's at least an Apprentice.
+                artisanRanks = new List<ArtsRank>();
+                artisanRanks.Add(new Apprentice());
+                artsReqs = "No Artisan Data";
+            }
+        }
+
+        private static void ExtractCombatRanks(int id, out List<CombatRank> combatRanks, out string combatReqs)
+        {
+
+            combatReqs = "";
+
+            try
+            {
+                var combatrecord = WebReader.GetCombatRecord(id);
+                combatRanks = CombatRank.CalculateCombatRanks(combatrecord, out combatReqs);
+            }
+            catch (Exception)
+            {
+                //Assume everyone's at least a Yeoman.
+                combatRanks = new List<CombatRank>();
+                combatRanks.Add(new Yeoman());
+                combatReqs = "No Combat Data";
+            }
+        }
+        #endregion
+
         public static void DumpListToCSVFile(string fileName, List<Participant> fighters)
         {
             if (File.Exists(fileName))
@@ -125,7 +169,7 @@ namespace AdriaScorer.Lib
             List<string> fighterData = fighters
                 .Where(fight => fight != null)
                 .Select(fight => fight.ToString()).ToList();
-            fighterData.Insert(0, "Name,URL,Chapter,Highest Possible Combat Rank,Missing Combat Requirements,Highest Possible Artisan Rank,Missing Artisan Requirements, Highest Possible Archery Rank, Missing Archery Requirements,Highest Possible Ministry Rank, Missing Ministry Requirements");
+            fighterData.Insert(0, "Name,URL,Chapter,Date Last Updated, Highest Possible Combat Rank,Missing Combat Requirements,Highest Possible Artisan Rank,Missing Artisan Requirements, Highest Possible Archery Rank, Missing Archery Requirements,Highest Possible Ministry Rank, Missing Ministry Requirements");
             File.WriteAllLines(fileName, fighterData);
         }
         public override string ToString()
@@ -134,6 +178,7 @@ namespace AdriaScorer.Lib
                 '"'+this.Name.Replace("\"","'")+"\",\""
                 +this.Url+"\",\""
                 + this.Chapter + "\",\""
+                + this.UpdatedDate + "\",\""
                 + this.QualifiedCombatRanks.Last().GetRankName() + "\",\""
                 + this.MissingRequirementsForNextCombatRank + "\",\""
                 + this.QualifiedArtisanRanks.Last().GetRankName() + "\",\""
@@ -147,14 +192,6 @@ namespace AdriaScorer.Lib
             return result.ToString();
         }
 
-        public int Id { get; set; }
-
-        public string Url
-        {
-            get
-            {
-                return "http://adrianempire.org/members/rolls.php?id=" + this.Id;
-            }
-        }
+        
     }
 }
