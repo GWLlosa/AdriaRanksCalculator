@@ -178,7 +178,7 @@ namespace AdriaScorer.Lib
                 '"'+this.Name.Replace("\"","'")+"\",\""
                 +this.Url+"\",\""
                 + this.Chapter + "\",\""
-                + this.UpdatedDate + "\",\""
+                + this.UpdatedDate.ToShortDateString() + "\",\""
                 + this.QualifiedCombatRanks.Last().GetRankName() + "\",\""
                 + this.MissingRequirementsForNextCombatRank + "\",\""
                 + this.QualifiedArtisanRanks.Last().GetRankName() + "\",\""
