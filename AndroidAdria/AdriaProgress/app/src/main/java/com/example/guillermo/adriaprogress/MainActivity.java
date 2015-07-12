@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE,message);
-
+        startActivity(intent);
 
     }
 
