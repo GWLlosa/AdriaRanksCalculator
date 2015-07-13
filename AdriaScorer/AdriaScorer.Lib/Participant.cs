@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AdriaScorer.Lib
 {
@@ -18,7 +19,6 @@ namespace AdriaScorer.Lib
         public string Chapter { get; set; }
         public DateTime ExpiresOn { get; set; }
         public int Id { get; set; }
-
         public string Url
         {
             get
@@ -26,18 +26,13 @@ namespace AdriaScorer.Lib
                 return "http://adrianempire.org/members/rolls.php?id=" + this.Id;
             }
         }
-
         public DateTime UpdatedDate { get; set; }
-
         public List<CombatRank> QualifiedCombatRanks { get; set; }
         public string MissingRequirementsForNextCombatRank { get; set; }
-
         public List<ArtsRank> QualifiedArtisanRanks { get; set; }
         public string MissingRequirementsForNextArtisanRank { get; set; }
-
         public List<ArcheryRank> QualifiedArcheryRanks { get; set; }
         public string MissingRequirementsForNextArcheryRank { get; set; }
-
         public List<MinistryRank> QualifiedMinistryRanks { get; set; }
         public string MissingRequirementsForNextMinistryRank { get; set; }
         #endregion
@@ -172,6 +167,12 @@ namespace AdriaScorer.Lib
             fighterData.Insert(0, "Name,URL,Chapter,Date Last Updated, Highest Possible Combat Rank,Missing Combat Requirements,Highest Possible Artisan Rank,Missing Artisan Requirements, Highest Possible Archery Rank, Missing Archery Requirements,Highest Possible Ministry Rank, Missing Ministry Requirements");
             File.WriteAllLines(fileName, fighterData);
         }
+        public static void DumpListToXMLFile(string fileName, List<Participant> participants)
+        {
+            XElement rootNode = new XElement("Participants",
+                participants.Select(part => part.ToXml()));
+            File.WriteAllText(fileName, rootNode.ToString());
+        }
         public override string ToString()
         {
             StringBuilder result = new StringBuilder(
@@ -192,6 +193,23 @@ namespace AdriaScorer.Lib
             return result.ToString();
         }
 
-        
+        public XElement ToXml()
+        {
+            return new XElement("Participant",
+                new XElement("Name",this.Name),
+                new XElement("Chapter",this.Chapter),
+                new XElement("ExpirationDate",this.ExpiresOn),
+                new XElement("Id",this.Id),
+                new XElement("Url",this.Url),
+                new XElement("BestCombatRank",this.QualifiedCombatRanks.Last().GetRankName()),
+                new XElement("NextCombatRankReqs",this.MissingRequirementsForNextCombatRank),
+                new XElement("BestArtisanRank",this.QualifiedArtisanRanks.Last().GetRankName()),
+                new XElement("NextArtisanRankReqs",this.MissingRequirementsForNextArtisanRank),
+                new XElement("BestArcheryRank",this.QualifiedArcheryRanks.Last().GetRankName()),
+                new XElement("NextArcheryRankReqs",this.MissingRequirementsForNextArcheryRank),
+                new XElement("BestMinistryRank",this.QualifiedMinistryRanks.Last().GetRankName()),
+                new XElement("NextMinistryRankReqs",this.MissingRequirementsForNextMinistryRank)
+                );
+        }
     }
 }

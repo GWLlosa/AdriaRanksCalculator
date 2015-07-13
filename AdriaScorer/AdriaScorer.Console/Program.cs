@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AdriaScorer.Console
 {
@@ -51,6 +52,9 @@ namespace AdriaScorer.Console
                     fighters.Where(fighter => fighter.Chapter == chapterName)
                     .ToList());
             }
+
+            System.Console.WriteLine("Dumping XML");
+            Participant.DumpListToXMLFile(folderName + "AllData.xml", fighters);
 
         }
 

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AdriaProgressTracker</string>
+    <string name="title_participant_list">Items</string>
+    <string name="title_participant_detail">Participant Detail</string>
+</resources>
