@@ -47,7 +47,7 @@ namespace AdriaScorer.Console
                 if (retVal != null && !string.IsNullOrEmpty(retVal.Name))
                 {
                     System.Console.WriteLine("Found: " + retVal.Name);
-                    if (retVal.ExpiresOn.Year == 2016)
+                    if (retVal.ExpiresOn.Year >= 2016)
                         renewedUsers.Add(retVal);
                 }
             }
