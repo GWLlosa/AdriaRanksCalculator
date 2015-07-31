@@ -37,10 +37,26 @@ namespace AdriaScorer.Console
                         fighters.Add(retVal);
                 }
             }
+            List<Participant> renewedUsers = new List<Participant>();
+            for (int i = minValue; i < maxValue; i++)
+            {
+                int id = i;
+                if (i % 100 == 0)
+                    System.Console.WriteLine("Querying: " + id + " of " + maxValue);
+                var retVal = Participant.GetParticipantForId(id);
+                if (retVal != null && !string.IsNullOrEmpty(retVal.Name))
+                {
+                    System.Console.WriteLine("Found: " + retVal.Name);
+                    if (retVal.ExpiresOn.Year == 2016)
+                        renewedUsers.Add(retVal);
+                }
+            }
+
             System.Console.Clear();
             if (!Directory.Exists(folderName))
                 Directory.CreateDirectory(folderName);
             Participant.DumpListToCSVFile(folderName+"AllCombatants.csv", fighters);
+            Participant.DumpMembershipStatusListToCSVFile(folderName + "AllRenewedUsers.csv", renewedUsers);
             var distinctChapters = fighters
                 .Select(fighter => fighter.Chapter)
                 .Distinct();

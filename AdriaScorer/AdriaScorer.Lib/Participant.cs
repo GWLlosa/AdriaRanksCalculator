@@ -157,6 +157,22 @@ namespace AdriaScorer.Lib
         }
         #endregion
 
+        public static void DumpMembershipStatusListToCSVFile(string fileName, List<Participant> members)
+        {
+            if (File.Exists(fileName))
+                File.Delete(fileName);
+            var memberData = members
+                .Where(member => member != null)
+                .Select(member =>
+                '"' + member.Name.Replace("\"", "'") + "\",\""
+                + member.Url + "\",\""
+                + member.Chapter + "\",\""
+                + member.UpdatedDate.ToShortDateString() + "\",\""
+                + member.ExpiresOn.ToShortDateString() + "\""
+            ).ToList();
+            memberData.Insert(0, "Name,URL,Chapter,Date Last Updated, Expires On");
+            File.WriteAllLines(fileName, memberData);
+        }
         public static void DumpListToCSVFile(string fileName, List<Participant> fighters)
         {
             if (File.Exists(fileName))
