@@ -482,7 +482,7 @@
   <Participant>
     <Name>Cheyla M. Callahan</Name>
     <Chapter>Albion-Rayonne</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>1453</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=1453</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -4111,7 +4111,7 @@
   </Participant>
   <Participant>
     <Name>Delight Dee</Name>
-    <Chapter>Albion</Chapter>
+    <Chapter>Member at Large</Chapter>
     <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>4619</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=4619</Url>
@@ -5702,7 +5702,7 @@
   <Participant>
     <Name>Alexas D. Sawyer</Name>
     <Chapter>Albion-Rayonne</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>5864</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=5864</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -6601,8 +6601,8 @@
   </Participant>
   <Participant>
     <Name>Steven Bussell</Name>
-    <Chapter>Member at Large</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <Chapter>Umbria</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>6390</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=6390</Url>
     <BestCombatRank>Sergeant</BestCombatRank>
@@ -6616,8 +6616,8 @@
   </Participant>
   <Participant>
     <Name>Crystal Deen</Name>
-    <Chapter>Member at Large</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <Chapter>Umbria</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>6391</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=6391</Url>
     <BestCombatRank>Guardsman</BestCombatRank>
@@ -8305,9 +8305,9 @@
     <BestArtisanRank>Knight Robe</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Knight Master: Missing 1 war participations.  Missing 18 Knights's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Knight Forester</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Warden: Missing 4 Huntsman's List Participations.  Missing 12 demonstrations.  </NextArcheryRankReqs>
-    <BestMinistryRank>Knight Civil</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Knight Premier: Missing 1 war participations.  </NextMinistryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Warden: Missing 3 Huntsman's List Participations.  Missing 11 demonstrations.  </NextArcheryRankReqs>
+    <BestMinistryRank>Knight Premier</BestMinistryRank>
+    <NextMinistryRankReqs>Satisfied</NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Gemma Conine-Dawson</Name>
@@ -8507,7 +8507,7 @@
   <Participant>
     <Name>Alvin King</Name>
     <Chapter>Albion-Rayonne</Chapter>
-    <ExpirationDate>2019-04-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>7264</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=7264</Url>
     <BestCombatRank>Guardsman</BestCombatRank>
@@ -11222,7 +11222,7 @@
   <Participant>
     <Name>Heather Cooke</Name>
     <Chapter>Albion-Rayonne</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8268</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8268</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -12332,7 +12332,7 @@
   <Participant>
     <Name>Todd Maehren</Name>
     <Chapter>Albion-Rayonne</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8564</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8564</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -12362,7 +12362,7 @@
   <Participant>
     <Name>Guillermo Llosa</Name>
     <Chapter>Stirling</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8569</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8569</Url>
     <BestCombatRank>Knight Bachelor</BestCombatRank>
@@ -12377,7 +12377,7 @@
   <Participant>
     <Name>Sylvia Llosa</Name>
     <Chapter>Stirling</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8570</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8570</Url>
     <BestCombatRank>Sergeant</BestCombatRank>
@@ -12392,7 +12392,7 @@
   <Participant>
     <Name>Dawn Reed Gunn</Name>
     <Chapter>Cashel</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8573</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8573</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -13797,7 +13797,7 @@
     <BestArcheryRank>Bowman</BestArcheryRank>
     <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 4 Bowman's List Participations.  Missing 1 Bowman's List Wins.  Missing 1 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Rector</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Chamberlain: Missing 5 Ministry Participations.  Missing 1 demonstration initiations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Chamberlain: Missing 4 Ministry Participations.  Missing 1 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Steven Stratton</Name>
@@ -13810,7 +13810,7 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Bowman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 4 Bowman's List Participations.  Missing 1 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 4 Bowman's List Participations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Rector: Missing 1 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
@@ -13825,9 +13825,9 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Bowman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 4 Bowman's List Participations.  Missing 1 Bowman's List Wins.  Missing 1 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 4 Bowman's List Participations.  Missing 1 Bowman's List Wins.  </NextArcheryRankReqs>
     <BestMinistryRank>Rector</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Chamberlain: Missing 5 Ministry Participations.  Missing 1 demonstration initiations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Chamberlain: Missing 5 Ministry Participations.  Missing 1 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Elizabeth Young</Name>
@@ -13993,6 +13993,21 @@
     <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Rector: Missing 1 Ministry Participations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+  </Participant>
+  <Participant>
+    <Name>Gavin Llosa</Name>
+    <Chapter>Stirling</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
+    <Id>8828</Id>
+    <Url>http://adrianempire.org/members/rolls.php?id=8828</Url>
+    <BestCombatRank>Yeoman</BestCombatRank>
+    <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
+    <BestArtisanRank>Apprentice</BestArtisanRank>
+    <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
+    <BestArcheryRank>Yeoman Archer</BestArcheryRank>
+    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <BestMinistryRank>Clarke</BestMinistryRank>
+    <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Xyleena M. Martin</Name>
@@ -14365,7 +14380,7 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Marksman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 1 Huntsman's List Participations.  Missing 2 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 1 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Rector</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Chamberlain: Missing 1 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
@@ -15040,9 +15055,9 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Marksman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 10 Huntsman's List Participations.  Missing 1 Huntsman's List Wins.  Missing 3 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 9 Huntsman's List Participations.  Missing 1 Huntsman's List Wins.  Missing 2 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 2 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Paige Weidner</Name>
@@ -16472,7 +16487,7 @@
   <Participant>
     <Name>Ashley Warberg</Name>
     <Chapter>Gloucester</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9110</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9110</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -16607,7 +16622,7 @@
   <Participant>
     <Name>Isabel DeWick</Name>
     <Chapter>Gloucester</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9119</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9119</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -17642,7 +17657,7 @@
   <Participant>
     <Name>Shawn  Willis</Name>
     <Chapter>Glynmore</Chapter>
-    <ExpirationDate>2015-09-28T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9191</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9191</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -18415,9 +18430,9 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
     <BestArcheryRank>Bowman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 3 Bowman's List Participations.  Missing 2 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 2 Bowman's List Participations.  Missing 1 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 2 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Trina Lawrence</Name>
@@ -18430,9 +18445,9 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
     <BestArcheryRank>Bowman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 3 Bowman's List Participations.  Missing 2 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 2 Bowman's List Participations.  Missing 1 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Tonia R Brown</Name>
@@ -18957,7 +18972,7 @@
     <BestArcheryRank>Yeoman Archer</BestArcheryRank>
     <NextArcheryRankReqs>Requirements Missing For Bowman: Missing 3 Bowman's List Participations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Amanda Fritz</Name>
@@ -19167,7 +19182,7 @@
     <BestArcheryRank>Yeoman Archer</BestArcheryRank>
     <NextArcheryRankReqs>Requirements Missing For Bowman: Missing 3 Bowman's List Participations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Sean Rory O'Riordan</Name>
@@ -19257,7 +19272,7 @@
     <BestArcheryRank>Yeoman Archer</BestArcheryRank>
     <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Jacob Hanson</Name>
@@ -19465,9 +19480,9 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
     <BestArcheryRank>Yeoman Archer</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Bowman: Missing 2 Bowman's List Participations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Bowman: Missing 1 Bowman's List Participations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>William P Cryts II</Name>
@@ -19982,7 +19997,7 @@
   <Participant>
     <Name>Jennifer  Carter</Name>
     <Chapter>Var Heim</Chapter>
-    <ExpirationDate>2017-04-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9349</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9349</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -20015,6 +20030,21 @@
     <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9351</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9351</Url>
+    <BestCombatRank>Yeoman</BestCombatRank>
+    <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
+    <BestArtisanRank>Apprentice</BestArtisanRank>
+    <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
+    <BestArcheryRank>Yeoman Archer</BestArcheryRank>
+    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <BestMinistryRank>Clarke</BestMinistryRank>
+    <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
+  </Participant>
+  <Participant>
+    <Name>Chloe Bays</Name>
+    <Chapter>Murrisk</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
+    <Id>9352</Id>
+    <Url>http://adrianempire.org/members/rolls.php?id=9352</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
     <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
     <BestArtisanRank>Apprentice</BestArtisanRank>
@@ -20190,7 +20220,7 @@
     <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
   </Participant>
   <Participant>
-    <Name>patrick tarzi</Name>
+    <Name>Patrick Tarzi</Name>
     <Chapter>Albion-Rayonne</Chapter>
     <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9364</Id>
@@ -20360,6 +20390,96 @@
     <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9376</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9376</Url>
+    <BestCombatRank>Yeoman</BestCombatRank>
+    <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
+    <BestArtisanRank>Apprentice</BestArtisanRank>
+    <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
+    <BestArcheryRank>Yeoman Archer</BestArcheryRank>
+    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <BestMinistryRank>Clarke</BestMinistryRank>
+    <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
+  </Participant>
+  <Participant>
+    <Name>Loise Caarner</Name>
+    <Chapter>Albion-Rayonne</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
+    <Id>9378</Id>
+    <Url>http://adrianempire.org/members/rolls.php?id=9378</Url>
+    <BestCombatRank>Yeoman</BestCombatRank>
+    <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
+    <BestArtisanRank>Apprentice</BestArtisanRank>
+    <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
+    <BestArcheryRank>Yeoman Archer</BestArcheryRank>
+    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <BestMinistryRank>Clarke</BestMinistryRank>
+    <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
+  </Participant>
+  <Participant>
+    <Name>David Stem</Name>
+    <Chapter>Albion-Rayonne</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
+    <Id>9379</Id>
+    <Url>http://adrianempire.org/members/rolls.php?id=9379</Url>
+    <BestCombatRank>Yeoman</BestCombatRank>
+    <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
+    <BestArtisanRank>Apprentice</BestArtisanRank>
+    <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
+    <BestArcheryRank>Yeoman Archer</BestArcheryRank>
+    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <BestMinistryRank>Clarke</BestMinistryRank>
+    <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
+  </Participant>
+  <Participant>
+    <Name>Kylie Llosa</Name>
+    <Chapter>Stirling</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
+    <Id>9380</Id>
+    <Url>http://adrianempire.org/members/rolls.php?id=9380</Url>
+    <BestCombatRank>Yeoman</BestCombatRank>
+    <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
+    <BestArtisanRank>Apprentice</BestArtisanRank>
+    <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
+    <BestArcheryRank>Yeoman Archer</BestArcheryRank>
+    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <BestMinistryRank>Clarke</BestMinistryRank>
+    <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
+  </Participant>
+  <Participant>
+    <Name>Caitlin Lllosa</Name>
+    <Chapter>Stirling</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
+    <Id>9381</Id>
+    <Url>http://adrianempire.org/members/rolls.php?id=9381</Url>
+    <BestCombatRank>Yeoman</BestCombatRank>
+    <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
+    <BestArtisanRank>Apprentice</BestArtisanRank>
+    <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
+    <BestArcheryRank>Yeoman Archer</BestArcheryRank>
+    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <BestMinistryRank>Clarke</BestMinistryRank>
+    <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
+  </Participant>
+  <Participant>
+    <Name>Jamie Brown</Name>
+    <Chapter>Member at Large</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
+    <Id>9382</Id>
+    <Url>http://adrianempire.org/members/rolls.php?id=9382</Url>
+    <BestCombatRank>Yeoman</BestCombatRank>
+    <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
+    <BestArtisanRank>Apprentice</BestArtisanRank>
+    <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
+    <BestArcheryRank>Yeoman Archer</BestArcheryRank>
+    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <BestMinistryRank>Clarke</BestMinistryRank>
+    <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
+  </Participant>
+  <Participant>
+    <Name>Marisa Draeger</Name>
+    <Chapter>Member at Large</Chapter>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
+    <Id>9383</Id>
+    <Url>http://adrianempire.org/members/rolls.php?id=9383</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
     <NextCombatRankReqs>No Combat Data</NextCombatRankReqs>
     <BestArtisanRank>Apprentice</BestArtisanRank>
