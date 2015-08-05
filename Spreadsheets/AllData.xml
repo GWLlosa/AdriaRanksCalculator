@@ -174,8 +174,8 @@
     <NextCombatRankReqs>Requirements Missing For Guardsman: Missing 3 Sergeant's List Participations.  </NextCombatRankReqs>
     <BestArtisanRank>Journeyman</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Master: Missing 4 Journeyman's List Participations.  </NextArtisanRankReqs>
-    <BestArcheryRank>Bowman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 1 demonstrations.  </NextArcheryRankReqs>
+    <BestArcheryRank>Marksman</BestArcheryRank>
+    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 3 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Knight Minister</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Knight Civil: Missing 1 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
@@ -3040,7 +3040,7 @@
     <BestArtisanRank>Knight Master</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Knight Doctor: Missing 36 Knights's List Participations.  Missing 2 Masterworks Made.  </NextArtisanRankReqs>
     <BestArcheryRank>Knight Forester</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Warden: Missing 15 Huntsman's List Participations.  Missing 14 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Warden: Missing 15 Huntsman's List Participations.  Missing 13 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Knight Premier</BestMinistryRank>
     <NextMinistryRankReqs>Satisfied</NextMinistryRankReqs>
   </Participant>
@@ -3940,7 +3940,7 @@
     <BestArtisanRank>Master</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Knight Robe: Missing 9 Knights's List Participations.  Missing 1 Masterworks Made.  </NextArtisanRankReqs>
     <BestArcheryRank>Knight Forester</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Warden: Missing 4 Huntsman's List Wins.  Missing 3 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Warden: Missing 4 Huntsman's List Wins.  Missing 2 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Knight Premier</BestMinistryRank>
     <NextMinistryRankReqs>Satisfied</NextMinistryRankReqs>
   </Participant>
@@ -5185,7 +5185,7 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Knight Archer</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Forester: Missing 9 Huntsman's List Participations.  Missing 5 Huntsman's List Wins.  Missing 1 war participations.  Missing 5 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Forester: Missing 9 Huntsman's List Participations.  Missing 5 Huntsman's List Wins.  Missing 1 war participations.  Missing 4 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Chamberlain</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Knight Minister: Missing 2 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
@@ -6767,7 +6767,7 @@
   <Participant>
     <Name>Kristoffer Ray Ramsey</Name>
     <Chapter>Umbria</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>6455</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=6455</Url>
     <BestCombatRank>Knight Bachelor</BestCombatRank>
@@ -6797,7 +6797,7 @@
   <Participant>
     <Name>Jennifer Acres</Name>
     <Chapter>Auroch's Fjord</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>6461</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=6461</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -6985,7 +6985,7 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 1 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Marksman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 3 Huntsman's List Participations.  Missing 1 Huntsman's List Wins.  Missing 1 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 3 Huntsman's List Participations.  Missing 1 Huntsman's List Wins.  </NextArcheryRankReqs>
     <BestMinistryRank>Knight Minister</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Knight Civil: Missing 10 Ministry Participations.  Missing 3 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
@@ -7531,7 +7531,7 @@
   </Participant>
   <Participant>
     <Name>Christopher C. Smith</Name>
-    <Chapter>Monaco</Chapter>
+    <Chapter>Somerset</Chapter>
     <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>6849</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=6849</Url>
@@ -8305,7 +8305,7 @@
     <BestArtisanRank>Knight Robe</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Knight Master: Missing 1 war participations.  Missing 18 Knights's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Knight Forester</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Warden: Missing 3 Huntsman's List Participations.  Missing 11 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Warden: Missing 3 Huntsman's List Participations.  Missing 10 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Knight Premier</BestMinistryRank>
     <NextMinistryRankReqs>Satisfied</NextMinistryRankReqs>
   </Participant>
@@ -10330,7 +10330,7 @@
     <BestArtisanRank>Journeyman</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Master: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Knight Archer</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Forester: Missing 2 Huntsman's List Participations.  Missing 5 Huntsman's List Wins.  Missing 1 war participations.  Missing 2 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Forester: Missing 2 Huntsman's List Participations.  Missing 5 Huntsman's List Wins.  Missing 1 war participations.  Missing 1 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Chamberlain</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Knight Minister: Missing 2 Ministry Participations.  Missing 2 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
@@ -10517,7 +10517,7 @@
   <Participant>
     <Name>Michelle Scott</Name>
     <Chapter>Umbria</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8028</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8028</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -10877,7 +10877,7 @@
   <Participant>
     <Name>Kathleen Mondino</Name>
     <Chapter>Auroch's Fjord</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8133</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8133</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -12287,7 +12287,7 @@
   <Participant>
     <Name>Alex Scott</Name>
     <Chapter>Umbria</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8554</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8554</Url>
     <BestCombatRank>Guardsman</BestCombatRank>
@@ -12302,7 +12302,7 @@
   <Participant>
     <Name>Paige  Scott</Name>
     <Chapter>Umbria</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8557</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8557</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -12685,7 +12685,7 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Marksman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 3 Huntsman's List Participations.  Missing 1 Huntsman's List Wins.  Missing 1 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 3 Huntsman's List Participations.  Missing 1 Huntsman's List Wins.  </NextArcheryRankReqs>
     <BestMinistryRank>Rector</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Chamberlain: Missing 1 Ministry Participations.  Missing 1 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
@@ -13277,7 +13277,7 @@
   <Participant>
     <Name>Michelle Mondino</Name>
     <Chapter>Auroch's Fjord</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>8718</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=8718</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -14379,8 +14379,8 @@
     <NextCombatRankReqs>Requirements Missing For Sergeant: Missing 1 Sergeant's List Participations.  Missing 1 Sergeant's List Wins.  </NextCombatRankReqs>
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
-    <BestArcheryRank>Marksman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 1 demonstrations.  </NextArcheryRankReqs>
+    <BestArcheryRank>Knight Archer</BestArcheryRank>
+    <NextArcheryRankReqs>Requirements Missing For Knight Forester: Missing 18 Huntsman's List Participations.  Missing 2 Huntsman's List Wins.  Missing 3 war participations.  Missing 5 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Rector</BestMinistryRank>
     <NextMinistryRankReqs>Requirements Missing For Chamberlain: Missing 1 demonstration initiations.  </NextMinistryRankReqs>
   </Participant>
@@ -15055,9 +15055,9 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Marksman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 9 Huntsman's List Participations.  Missing 1 Huntsman's List Wins.  Missing 2 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Knight Archer: Missing 9 Huntsman's List Participations.  Missing 1 Huntsman's List Wins.  Missing 1 demonstrations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 2 Ministry Participations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 1 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Paige Weidner</Name>
@@ -15070,9 +15070,9 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>Requirements Missing For Journeyman: Missing 3 Journeyman's List Participations.  </NextArtisanRankReqs>
     <BestArcheryRank>Bowman</BestArcheryRank>
-    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 1 Bowman's List Wins.  Missing 1 demonstrations.  </NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Marksman: Missing 1 Bowman's List Wins.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
-    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  Missing 1 demonstrations.  </NextMinistryRankReqs>
+    <NextMinistryRankReqs>Requirements Missing For Rector: Missing 3 Ministry Participations.  </NextMinistryRankReqs>
   </Participant>
   <Participant>
     <Name>Garrett A. Piersa</Name>
@@ -15092,7 +15092,7 @@
   <Participant>
     <Name>Kayla Vaughn (Hall)</Name>
     <Chapter>Auroch's Fjord</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9006</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9006</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -16607,7 +16607,7 @@
   <Participant>
     <Name>Kay Acres</Name>
     <Chapter>Auroch's Fjord</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9118</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9118</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -17402,7 +17402,7 @@
   <Participant>
     <Name>Jeremiah Cultice</Name>
     <Chapter>Auroch's Fjord</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9171</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9171</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -20117,7 +20117,7 @@
   <Participant>
     <Name>Kristen Allen</Name>
     <Chapter>Auroch's Fjord</Chapter>
-    <ExpirationDate>2015-07-01T00:00:00</ExpirationDate>
+    <ExpirationDate>2016-04-01T00:00:00</ExpirationDate>
     <Id>9358</Id>
     <Url>http://adrianempire.org/members/rolls.php?id=9358</Url>
     <BestCombatRank>Yeoman</BestCombatRank>
@@ -20380,7 +20380,7 @@
     <BestArtisanRank>Apprentice</BestArtisanRank>
     <NextArtisanRankReqs>No Artisan Data</NextArtisanRankReqs>
     <BestArcheryRank>Yeoman Archer</BestArcheryRank>
-    <NextArcheryRankReqs>No Archery Data</NextArcheryRankReqs>
+    <NextArcheryRankReqs>Requirements Missing For Bowman: Missing 3 Bowman's List Participations.  </NextArcheryRankReqs>
     <BestMinistryRank>Clarke</BestMinistryRank>
     <NextMinistryRankReqs>No Ministry Data</NextMinistryRankReqs>
   </Participant>
