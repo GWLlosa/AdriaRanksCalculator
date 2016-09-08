@@ -178,7 +178,18 @@ namespace AdriaScorer.Lib
             {
                 if (i % 250 == 0)
                     System.Console.WriteLine("Processing ID:" + i);
-                GetWebContentForId(i);
+                for (int retry  = 0; retry < 10; retry++)
+                {
+                    try
+                    {
+                        GetWebContentForId(i);
+                        continue;
+                    }
+                    catch (Exception)
+                    { }
+                }
+                
+                
             }
             SaveData(file);
         }

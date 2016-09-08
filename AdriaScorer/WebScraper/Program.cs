@@ -14,7 +14,7 @@ namespace WebScraper
         {
             //recommend range of 1-9400
             int minValue = 1;
-            int maxValue = 9400;
+            int maxValue = 10000;
            
             WebReader.SaveData(cachedFileData,minValue,maxValue);
 
