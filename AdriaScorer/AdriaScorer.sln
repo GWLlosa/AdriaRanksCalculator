@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdriaScorer", "AdriaScorer\AdriaScorer.csproj", "{AB114FE5-AAAD-4AE0-80BC-E5F4C3F94EBD}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdriaScorer.Console", "AdriaScorer.Console\AdriaScorer.Console.csproj", "{9A94EE59-56A7-4965-B618-9A987D2E1772}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScraper", "WebScraper\WebScraper.csproj", "{0F9FAA70-FD2A-4554-816B-E99C86037B78}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdriaScorer.Database", "AdriaScorer.Database\AdriaScorer.Database.sqlproj", "{BED45810-9C33-4BCB-9AE8-973D400F5320}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{0F9FAA70-FD2A-4554-816B-E99C86037B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F9FAA70-FD2A-4554-816B-E99C86037B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F9FAA70-FD2A-4554-816B-E99C86037B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED45810-9C33-4BCB-9AE8-973D400F5320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED45810-9C33-4BCB-9AE8-973D400F5320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED45810-9C33-4BCB-9AE8-973D400F5320}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BED45810-9C33-4BCB-9AE8-973D400F5320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED45810-9C33-4BCB-9AE8-973D400F5320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED45810-9C33-4BCB-9AE8-973D400F5320}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

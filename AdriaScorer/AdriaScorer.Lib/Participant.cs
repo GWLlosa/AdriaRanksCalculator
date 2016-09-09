@@ -4,6 +4,8 @@ using AdriaScorer.Lib.Combat;
 using AdriaScorer.Lib.Ministry;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -18,6 +20,7 @@ namespace AdriaScorer.Lib
         public string Name { get; set; }
         public string Chapter { get; set; }
         public DateTime ExpiresOn { get; set; }
+        [Key]
         public int Id { get; set; }
         public string Url
         {
@@ -26,13 +29,23 @@ namespace AdriaScorer.Lib
                 return "http://adrianempire.org/members/rolls.php?id=" + this.Id;
             }
         }
+
+        
         public DateTime UpdatedDate { get; set; }
+        public string CombatRanks { get; set; }
+        public string ArtisanRanks { get; set; }
+        public string ArcheryRanks { get; set; }
+        public string MinistryRanks { get; set; }
+        [NotMapped]
         public List<CombatRank> QualifiedCombatRanks { get; set; }
         public string MissingRequirementsForNextCombatRank { get; set; }
+        [NotMapped]
         public List<ArtsRank> QualifiedArtisanRanks { get; set; }
         public string MissingRequirementsForNextArtisanRank { get; set; }
+        [NotMapped]
         public List<ArcheryRank> QualifiedArcheryRanks { get; set; }
         public string MissingRequirementsForNextArcheryRank { get; set; }
+        [NotMapped]
         public List<MinistryRank> QualifiedMinistryRanks { get; set; }
         public string MissingRequirementsForNextMinistryRank { get; set; }
         #endregion
@@ -67,6 +80,10 @@ namespace AdriaScorer.Lib
                     Name = combatantName,
                     Id = id,
                     QualifiedCombatRanks = combatRanks,
+                    CombatRanks = string.Join("|",combatRanks.Select(cr=>cr.GetRankName())),
+                    ArcheryRanks = string.Join("|", archeryRanks.Select(cr => cr.GetRankName())),
+                    ArtisanRanks = string.Join("|", artisanRanks.Select(cr => cr.GetRankName())),
+                    MinistryRanks = string.Join("|", ministryRanks.Select(cr => cr.GetRankName())),
                     QualifiedArtisanRanks = artisanRanks,
                     QualifiedArcheryRanks = archeryRanks,
                     QualifiedMinistryRanks = ministryRanks,
